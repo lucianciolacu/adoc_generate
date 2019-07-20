@@ -1,7 +1,7 @@
 {
   "name": "adoc_generate",
   "description": "Scaffolding tool to generate AsciiDoctor files in the Antora structure.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Lucian Ciolacu",
   "bin": {
     "adoc_generate": "./bin/run"
