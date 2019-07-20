@@ -19,7 +19,7 @@ $ npm install -g adoc_generate
 $ adoc_generate COMMAND
 running command...
 $ adoc_generate (-v|--version|version)
-adoc_generate/0.0.2 linux-x64 node-v10.16.0
+adoc_generate/0.0.3 linux-x64 node-v10.16.0
 $ adoc_generate --help [COMMAND]
 USAGE
   $ adoc_generate COMMAND
@@ -43,7 +43,7 @@ OPTIONS
   -n, --reponame=reponame  Name of the repository
 ```
 
-_See code: [src/commands/generate.js](https://github.com/lucianciolacu/adoc_generate/blob/v0.0.2/src/commands/generate.js)_
+_See code: [src/commands/generate.js](https://github.com/lucianciolacu/adoc_generate/blob/v0.0.3/src/commands/generate.js)_
 
 ## `adoc_generate help [COMMAND]`
 
