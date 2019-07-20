@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: clone
+    image: plugins/git
+    depth: 1
+  - name: build
+    commands: antora playbook.yml
+  - name: push
+    image: cschlosser/drone-ftps
+    hostname: localhost:21
+    secrets: [ admin, admin ]
+    secure: true
+    src_dir: ./public
+    dest_dir: /home/username/
