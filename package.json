@@ -25,6 +25,7 @@
     "/bin",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json",
+    "/templates",
     "/src"
   ],
   "homepage": "https://github.com/lucianciolacu/adoc_generate",
