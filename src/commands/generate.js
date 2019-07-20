@@ -1,5 +1,6 @@
 const { Command, flags } = require('@oclif/command')
 const fs = require('fs')
+const path = require('path')
 
 var currentPath = process.cwd()
 
@@ -16,7 +17,8 @@ class generateCommand extends Command {
     // assets + images
     fs.mkdirSync(currentPath + '/' + repoName + '/modules' + '/ROOT' + '/assets' + '/images', { recursive: true })
     // Copy template files
-    var templates = 'src/templates'
+    var templates = path.join(__dirname, '../templates')
+    // path.join(__dirname, '/src/templates')
     const sourcePaths = [templates, templates, templates + '/modules/ROOT', templates + '/modules/ROOT/assets/images', templates + '/modules/ROOT/pages', templates + '/modules/ROOT/pages/_partials']
     const files = ['/antora.yml', '/playbook.yml', '/nav.adoc', '/asciidoc.jpg', '/index.adoc', '/partial.adoc']
     const destination = currentPath + '/' + repoName
