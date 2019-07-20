@@ -16,7 +16,7 @@ class generateCommand extends Command {
     // assets + images
     fs.mkdirSync(currentPath + '/' + repoName + '/modules' + '/ROOT' + '/assets' + '/images', { recursive: true })
     // Copy template files
-    var templates = './src/templates'
+    var templates = 'src/templates'
     const sourcePaths = [templates, templates, templates + '/modules/ROOT', templates + '/modules/ROOT/assets/images', templates + '/modules/ROOT/pages', templates + '/modules/ROOT/pages/_partials']
     const files = ['/antora.yml', '/playbook.yml', '/nav.adoc', '/asciidoc.jpg', '/index.adoc', '/partial.adoc']
     const destination = currentPath + '/' + repoName
