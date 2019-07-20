@@ -17,10 +17,9 @@ class generateCommand extends Command {
     fs.mkdirSync(currentPath + '/' + repoName + '/modules' + '/ROOT' + '/pages' + '/_partials', { recursive: true });
     //assets + images
     fs.mkdirSync(currentPath + '/' + repoName + '/modules' + '/ROOT' + '/assets' + '/images', { recursive: true });
-    //this.log(`generate ${name} from ./src/commands/generate.js`)
     //Copy template files
     //YML files
-    //tooling/templates/modules/ROOT/assets/images/asciidoc.jpg
+
     var templates = 'src/templates'
     const sourcePaths = [templates, templates, templates + '/modules/ROOT', templates + '/modules/ROOT/assets/images', templates + '/modules/ROOT/pages', templates + '/modules/ROOT/pages/_partials'];
     const files = ['/antora.yml', '/playbook.yml', '/nav.adoc', '/asciidoc.jpg', '/index.adoc', '/partial.adoc'];
@@ -39,7 +38,6 @@ generateCommand.description = `Generates the Antora Structure`
 
 generateCommand.flags = {
   reponame: flags.string({char: 'n', description: 'Name of the repository'}),
-  //name: flags.string({char: 'n', description: 'name to print'}),
 }
 
 module.exports = generateCommand
